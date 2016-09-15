@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "jquery": "~2.2.0",
-    "pusher": "^3.0.0"
+    "pusher": "^3.0.0",
+    "vuejs": "~1.0.26"
   }
 }
