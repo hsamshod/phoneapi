@@ -5,11 +5,18 @@
             <div>
                 звонок от {{ number }}
             </div>
-            <div>
+            <div v-if="type == 'egecrm'">
                 <span v-if="caller.type == 'teacher'">преподаватель <a target='_blank' href='teachers/edit/{{caller.id}}'>{{ caller.name }}</a></span>
                 <span v-if="caller.type == 'representative'">представитель <a target='_blank' href='student/{{caller.id}}' >{{ caller.name }}</a></span>
                 <span v-if="caller.type == 'student'">ученик <a target='_blank' href='student/{{caller.id}}' >{{ caller.name }}</a></span>
                 <span v-if="caller.type == 'request'">по заявке <a target='_blank' href='requests/edit/{{caller.id}}'>{{ caller.name }}</a></span>
+                <span v-if="!caller.type">неизвестный номер</span>
+            </div>
+
+            <div v-if="type == 'egerep'">
+                <span v-if="caller.type == 'tutor'">преподаватель <a target='_blank' href='tutors/{{caller.id}}/edit'>{{ caller.name }}</a></span>
+                <span v-if="caller.type == 'client'">клиент <a target='_blank' href='client/{{caller.id}}' >{{ caller.name }}</a></span>
+                <span v-if="caller.type == 'request'">по заявке <a target='_blank' href='requests/{{caller.id}}/edit'>{{ caller.name }}</a></span>
                 <span v-if="!caller.type">неизвестный номер</span>
             </div>
 

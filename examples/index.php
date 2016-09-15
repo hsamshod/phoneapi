@@ -10,7 +10,7 @@
 <?php if (User::fromSession()->show_phone_calls) :?>
     <div class="phone-app">
         <? include 'bower/phoneapi/dist/template/_phone_api.php'; ?>
-        <phone :user_id="102"></phone>
+        <phone user_id="102" type="egerep" key="pusher_key"></phone>
     </div>
 <?php endif ?>
 </body>

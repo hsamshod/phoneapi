@@ -12,7 +12,7 @@
     Vue.config.debug = true;
     Vue.config.async = false;
     Vue.component('phone', {
-      props: ['user_id'],
+      props: ['user_id', 'type', 'key'],
       data: function() {
         return {
           show_element: false,
@@ -64,7 +64,7 @@
         },
         initPusher: function() {
           var channel, pusher;
-          pusher = new Pusher('a9e10be653547b7106c0', {
+          pusher = new Pusher(this.key, {
             encrypted: true
           });
           channel = pusher.subscribe("user_" + this.user_id);

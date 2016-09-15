@@ -18,7 +18,7 @@ usage
 ```php
   <div class="phone-app">
     <? include 'bower/phoneapi/dist/template/_phone_api.php'; ?>
-    <phone user_id="102"></phone>
+    <phone user_id="102" type="egerep" key="pusher_key"></phone>
   </div>
 ```
 
