@@ -65,7 +65,8 @@
         initPusher: function() {
           var channel, pusher;
           pusher = new Pusher(this.key, {
-            encrypted: true
+            encrypted: true,
+            cluster: 'eu'
           });
           channel = pusher.subscribe("user_" + this.user_id);
           channel.bind('incoming', (function(_this) {
