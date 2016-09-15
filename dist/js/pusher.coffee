@@ -10,7 +10,7 @@ vueInit = ->
 		props: ['user_id']
 		data: ->
 			show_element: false 		# show <phone>
-#connected: false 			# call in progress
+			#connected: false 			# call in progress
 			timer:
 				hide_timeout: undefined
 				interval: undefined 	# call length in 01:30
